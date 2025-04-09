@@ -30,17 +30,17 @@ This README file contains "attestation library for Mig-TD" build instructions.
 ### Build the Attestation Library for Migration TD
 * Download the source code of [linux-sgx](https://github.com/intel/linux-sgx) and prepare the submodule [dcap-source](https://github.com/intel/SGXDataCenterAttestationPrimitives) by:
   ```
-   $ git clone https://github.com/intel/linux-sgx.git
+   $ git clone https://github.com/intel/linux-sgx.git --branch tdx_1.5_mvp_23q1
    $ cd linux-sgx && make td_migration_preparation
   ```
 * To build the Intel(R) Attestation library for TD Migration with default configration, and enter the following command:
   ```
-    $ make td_migraiton
+    $ make td_migration
   ```
   You can find the generated Intel(R) Attestation library for TD Migration `libmigtd_attest.a` located under `external/dcap_source/QuoteGeneration/quote_wrapper/td_migration/linux`.
 * To build the Intel(R) Attestation library for TD Migration with debug information, enter the following command:
   ```
-    $ make td_migraiton DEBUG=1
+    $ make td_migration DEBUG=1
   ```
 * To clean the files, enter the following command:
   ```
